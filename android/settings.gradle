@@ -1,0 +1,18 @@
+rootProject.name = 'mte_relay_client_plugin'
+
+// Dev-only composite: build against the checked-out sibling libs when present;
+// otherwise the declared com.eclypses:* artifacts resolve from Maven Central.
+if (file('../../../Packages/mte-relay-client-android').exists()) {
+    includeBuild('../../../Packages/mte-relay-client-android') {
+        dependencySubstitution {
+            substitute module('com.eclypses:mte-relay-client-android') using project(':relay')
+        }
+    }
+}
+if (file('../../../Packages/mte-client-android').exists()) {
+    includeBuild('../../../Packages/mte-client-android') {
+        dependencySubstitution {
+            substitute module('com.eclypses:mte-client-android') using project(':mte')
+        }
+    }
+}

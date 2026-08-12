@@ -1,0 +1,40 @@
+group = "com.eclypses.mte_relay"
+version = "1.0"
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.13.1")
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: "com.android.library"
+
+android {
+    namespace = "com.eclypses.mte_relay"
+    compileSdk = 35
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    dependencies {
+        implementation 'com.eclypses:mte-relay-client-android:5.1.0'
+        implementation 'org.slf4j:slf4j-api:2.0.9'
+        implementation 'com.github.tony19:logback-android:3.0.0'
+        implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    }
+
+}

@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "mte-client-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Eclypses/mte-client-ios.git",
+      "state" : {
+        "revision" : "4f718d540e5c80840269abe237cd5b4d4cfae410",
+        "version" : "4.2.1"
+      }
+    }
+  ],
+  "version" : 2
+}
